@@ -38,14 +38,28 @@ def rebootfunc():
         pyautogui.click(318,314)
         time.sleep(4)
         pyautogui.click(631,201)
+        pyautogui.click(1029,27)
         for num in range(1,100):
             time.sleep(1)
             print('------GO PRAY----')
 
+def prayer_time():
+    print('Scanning the time')
+    prayer_times = ['5','6','13','16','18','19','20','21']
+    prayer_minutes = ['0','2','3']
+    while 1==1:
+        hour_now = datetime.datetime.now().hour
+        minute_now = datetime.datetime.now().minute
+        second_now = datetime.datetime.now().second
+        time.sleep(1)
+        if str(hour_now) in prayer_times:
+            if str(minute_now) in prayer_minutes:
+                rebootfunc()
+        else:
+            pass
 
-while 1==1:
-    hour_now = datetime.datetime.now().hour
-    minute_now = datetime.datetime.now().minute
-    second_now = datetime.datetime.now().second
-    time.sleep(1)
-    print(f'it is:{hour_now}:{minute_now}:{second_now}')
+prayer_time()
+
+
+
+    
