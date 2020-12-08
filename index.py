@@ -46,7 +46,7 @@ def rebootfunc():
 def prayer_time():
     print('Scanning the time')
     prayer_times = ['5','6','13','16','18','19','20','21']
-    prayer_minutes = ['0','2','3']
+    prayer_minutes = ['0']
     while 1==1:
         hour_now = datetime.datetime.now().hour
         minute_now = datetime.datetime.now().minute
@@ -55,6 +55,7 @@ def prayer_time():
         if str(hour_now) in prayer_times:
             if str(minute_now) in prayer_minutes:
                 rebootfunc()
+                print('----- I HOPE YOU HAVE ALREADY PRAYED-------')
         else:
             pass
 
