@@ -44,9 +44,9 @@ def rebootfunc():
             print('------GO PRAY----')
 
 def prayer_time():
-    print('Scanning the time')
+    print('Waiting for salat')
     prayer_times = ['5','6','13','16','18','19','20','21']
-    prayer_minutes = ['0']
+    prayer_minutes = ['0','40']
     while 1==1:
         hour_now = datetime.datetime.now().hour
         minute_now = datetime.datetime.now().minute
