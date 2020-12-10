@@ -3,6 +3,10 @@ import pyautogui
 from selenium.webdriver.common.keys import Keys
 import time
 import datetime
+import winsound
+frequency = 2500  # Set Frequency To 2500 Hertz
+duration = 5000  # Set Duration To 1000 ms == 1 second
+
 def rebootfunc():
     PATH ="C:/Program Files/chromedriver.exe"
     driver = webdriver.Chrome(PATH)
@@ -38,7 +42,9 @@ def rebootfunc():
         pyautogui.click(318,314)
         time.sleep(4)
         pyautogui.click(631,201)
+        time.sleep(2)
         pyautogui.click(1029,27)
+        winsound.Beep(frequency, duration)
         for num in range(1,100):
             time.sleep(1)
             print('------GO PRAY----')
