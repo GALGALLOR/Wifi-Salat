@@ -22,11 +22,11 @@ def rebootfunc():
     time.sleep(5)
     Account_name = driver.find_element_by_id('txt_Username')
     Account_name.click()
-    Account_name.send_keys('root')
+    Account_name.send_keys('')
 
     Password = driver.find_element_by_id('txt_Password')
     Password.click()
-    Password.send_keys('adminHW')
+    Password.send_keys('')
     Password.send_keys(Keys.RETURN)
 
 
